@@ -9,3 +9,8 @@ elif last_num == 0:
     print(f"Last digit of {number} is {last_num} and is 0")
 elif last_num < 6 and number != 0:
     print(f"Last digit of {number} is {last_num} and is less than 6 and not 0")
+
+if number < 0:
+    last_num = - (abs(number) % 10)
+else:
+    last_num = number % 10
