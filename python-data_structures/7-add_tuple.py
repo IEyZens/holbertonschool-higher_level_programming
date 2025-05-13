@@ -33,4 +33,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
     else:
         # Assign 0 to b2
         b2 = 0
+    # Return a tuple with the sum of the first elements and the sum of the second elements
     return (a1 + b1, a2 + b2)
