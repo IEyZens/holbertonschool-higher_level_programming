@@ -11,7 +11,7 @@ def delete_at(my_list=[], idx=0):
         del my_list[idx]
     # If the index is out of range, return the list unchanged
     else:
-
+        # If the index is greater than the length of the list, return the list unchanged
         return my_list
     # Return the modified list
     return my_list
