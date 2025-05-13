@@ -2,7 +2,7 @@
 
 def divisible_by_2(my_list=[]):
     # Create a new list to store the results
-    new_list=[]
+    new_list = []
     # Loop through the list
     for i in my_list:
         # Check if the integer is divisible by 2
