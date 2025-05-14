@@ -23,3 +23,4 @@ def safe_print_list_integers(my_list=[], x=0):
             printed += 1
     # Print a new line after printing the elements
     print()
+    return printed
