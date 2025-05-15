@@ -1,52 +1,21 @@
 #!/usr/bin/python3
-"""A module to divides all elements of a matrix.
-
-This module is in charge of dividing all the values of a matrix
-according to a divisor given by the user. For the program to work
-properly, the following aspects must be taken into account:
-
-    * The matrix must  must be a list of lists of integers or floats.
-    * Each row of the matrix must be of the same size.
-    * The divisor must be a number (integer or float) other than 0.
-    * The division of all elements of the matrix is rounded off
-    to 2 decimal places.
-    * The result is delivered in a new matrix.
-
-"""
+"""Defines a matrix division function."""
 
 
 def matrix_divided(matrix, div):
-    """Divides all elements of a matrix.
-
-    This function takes the data sent by the user to verify
-    that the matrix contains lists within it and that each
-    list contains integer or floating type numbers.
-    The result of the splitting operation is then added to a
-    new list in a new matrix with the same matrix structure
-    given by the user.
-
-    In case the format of the matrix is incorrect
-    or the divisor is not a number, this function
-    will raise an error.
+    """Divide all elements of a matrix.
 
     Args:
-        matrix (:obj:`list` of :obj:`list`): The matrix to be divided.
-        div (int): The divisor number.
-
-    Returns:
-        list: A new matrix with all elements divided.
-
+        matrix (list): A list of lists of ints or floats.
+        div (int/float): The divisor.
     Raises:
-        TypeError: If `matrix` list of lists of integers or floats or
-            if `div` is not a number.
-        ZeroDivisionError: If `div` is equal to `0`.
-
-    Example:
-        >>> matrix_divided([[2, 4], [6, 8]], 2)
-        [[1.0, 2.0], [3.0, 4.0]]
-
+        TypeError: If the matrix contains non-numbers.
+        TypeError: If the matrix contains rows of different sizes.
+        TypeError: If div is not an int or float.
+        ZeroDivisionError: If div is 0.
+    Returns:
+        A new matrix representing the result of the division.
     """
-
     new_matrix = []
     if not isinstance(matrix, (list)):
         raise TypeError("matrix must be a matrix (list of lists)"
