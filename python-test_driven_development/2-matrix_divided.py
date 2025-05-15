@@ -69,8 +69,3 @@ def matrix_divided(matrix, div):
             new_row.append(round(element / div, 2))
         new_matrix.append(new_row)
     return new_matrix
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
