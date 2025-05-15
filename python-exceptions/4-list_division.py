@@ -29,6 +29,6 @@ def list_division(my_list_1, my_list_2, list_length):
             # Print an error message for out of range
             print("out of range")
         finally:
-            print("processing done for index {}".format(i))
+            pass
     # Return the new list containing the results of the division
     return new_list
