@@ -41,6 +41,10 @@ def matrix_divided(matrix, div):
             if `div` is not a number.
         ZeroDivisionError: If `div` is equal to `0`.
 
+    Example:
+        >>> matrix_divided([[1, 2], [3, 4]], 2)
+        [[0.5, 1.0], [1.5, 2.0]]
+
     """
 
     new_matrix = []
@@ -65,3 +69,8 @@ def matrix_divided(matrix, div):
             new_row.append(round(element / div, 2))
         new_matrix.append(new_row)
     return new_matrix
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
