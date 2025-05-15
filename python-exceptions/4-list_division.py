@@ -17,6 +17,7 @@ def list_division(my_list_1, my_list_2, list_length):
             new_list.append(0)
             # Print an error message for wrong type
             print("wrong type")
+        # If the second list has a zero at index i, catch the ZeroDivisionError
         except ZeroDivisionError:
             # Append 0 to the new list and print an error message
             new_list.append(0)
@@ -28,7 +29,9 @@ def list_division(my_list_1, my_list_2, list_length):
             new_list.append(0)
             # Print an error message for out of range
             print("out of range")
+        # Print the new list containing the results of the division
         finally:
+            # This block will always
             pass
     # Return the new list containing the results of the division
     return new_list
