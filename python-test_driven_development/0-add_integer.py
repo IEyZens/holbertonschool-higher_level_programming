@@ -17,6 +17,12 @@ def add_integer(a, b=98):
 
     Raises:
         TypeError: If a or b are not integers or floats.
+
+    Examples:
+        >>> add_integer(1, 2)
+        3
+        >>> add_integer(100)
+        198
     """
 
     # Validate the input types
