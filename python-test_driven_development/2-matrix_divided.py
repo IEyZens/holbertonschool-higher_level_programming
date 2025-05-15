@@ -42,8 +42,8 @@ def matrix_divided(matrix, div):
         ZeroDivisionError: If `div` is equal to `0`.
 
     Example:
-        >>> matrix_divided([[1, 2], [3, 4]], 2)
-        [[0.5, 1.0], [1.5, 2.0]]
+        >>> matrix_divided([[2, 4], [6, 8]], 2)
+        [[1.0, 2.0], [3.0, 4.0]]
 
     """
 
