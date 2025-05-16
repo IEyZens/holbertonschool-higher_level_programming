@@ -1,19 +1,15 @@
 #!/usr/bin/python3
-"""Defines a matrix division function."""
+"""Defines a name-printing function."""
 
 
 def say_my_name(first_name, last_name=""):
-    """Prints a formatted full name.
+    """Print a name.
 
     Args:
-        first_name (str): The first name.
-        last_name (str, optional): The last name. Defaults to "".
-
+        first_name (str): The first name to print.
+        last_name (str): The last name to print.
     Raises:
-        TypeError: If either first_name or last_name is not a string.
-
-    Prints:
-        The full name in the format: "My name is <first_name> <last_name>"
+        TypeError: If either of first_name or last_name are not strings.
     """
     # Check if first_name is a string
     if not isinstance(first_name, (str)):
