@@ -3,18 +3,17 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """Divide all elements of a matrix.
+    """Prints a formatted full name.
 
     Args:
-        matrix (list): A list of lists of ints or floats.
-        div (int/float): The divisor.
+        first_name (str): The first name.
+        last_name (str, optional): The last name. Defaults to "".
+
     Raises:
-        TypeError: If the matrix contains non-numbers.
-        TypeError: If the matrix contains rows of different sizes.
-        TypeError: If div is not an int or float.
-        ZeroDivisionError: If div is 0.
-    Returns:
-        A new matrix representing the result of the division.
+        TypeError: If either first_name or last_name is not a string.
+
+    Prints:
+        The full name in the format: "My name is <first_name> <last_name>"
     """
     # Check if first_name is a string
     if not isinstance(first_name, (str)):
