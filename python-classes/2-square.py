@@ -7,14 +7,12 @@ The class does not contain any attributes or methods.
 
 
 class Square:
-    """This is an empty class that defines a square."""
-    __size = None
-
-    """
-    This is a constructor method that initializes the size of the square.
-    :param size: The size of the square.
-    """
     def __init__(self, size):
+        """
+        Initialize the square with a given size.
+        Args:
+            size (int): The size of the square.
+        """
         # Check if size is an integer
         if not isinstance(size, int):
             # raise an exception if size is not an integer
