@@ -17,4 +17,5 @@ class Square:
     :param size: The size of the square.
     """
     def __init__(self, size):
+        # Check if size is an integer
         self.__size = size
