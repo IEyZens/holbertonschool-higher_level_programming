@@ -7,6 +7,8 @@ The class does not contain any attributes or methods.
 
 
 class Square:
+    """This is an empty class that defines a square."""
+
     def __init__(self, size):
         """
         Initialize the square with a given size.
