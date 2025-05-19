@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """
-This module defines an empty class Square.
-It serves as a placeholder for future development.
-The class does not contain any attributes or methods.
+This module defines a Square class that supports size and position,
+calculates area, and prints a square using the '#' character.
 """
 
 
 class Square:
-    """This is an empty class that defines a square."""
+    """
+    Represents a square with size and position attributes,
+    provides area calculation and printing functionality.
+    """
 
     def __init__(self, size=0, position=(0, 0)):
         """
