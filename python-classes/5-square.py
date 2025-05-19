@@ -82,5 +82,5 @@ class Square:
             return
         # Loop through the range of the size
         for i in range(self.__size):
-                # Print the '#' character for the size of the square
-                print("#" * self.__size)
+            # Print the '#' character for the size of the square
+            print("#" * self.__size)
