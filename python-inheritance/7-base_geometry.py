@@ -3,10 +3,15 @@
 
 
 class BaseGeometry:
-    """BaseGeometry class with an unimplemented area() method."""
+    """
+    A class representing geometric concepts with methods for area calculation
+    and integer validation.
+    """
 
     def area(self):
-        """Raises an Exception with the message 'area() is not implemented'."""
+        """
+        Raises an exception indicating that the method is not implemented.
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
