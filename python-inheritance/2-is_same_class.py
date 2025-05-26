@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Defines a function that returns a list of available attributes and methods
-    of an object.
+"""Defines a function that returns a list of available attributes and methods of an object.
     the object.
     """
 
