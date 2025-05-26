@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Defines a class MyList that inherits from list and adds a method to print
-the list in sorted order.
-"""
+"""Defines a function that returns a list of available attributes and methods
+    of an object.
+    the object.
+    """
 
 
 def is_same_class(obj, a_class):
@@ -12,5 +13,4 @@ def is_same_class(obj, a_class):
     Returns:
         bool: True if obj is an instance of a_class, False otherwise.
     """
-    # Check if obj is exactly an instance of a_class.
     return type(obj) == a_class
