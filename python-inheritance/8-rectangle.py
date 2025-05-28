@@ -12,25 +12,6 @@ class BaseGeometry:
     the area of geometric shapes.
     """
 
-    def __init__(self, width, height):
-        """
-        Initializes the BaseGeometry instance with width and height.
-        Args:
-            width (int): The width of the geometric shape.
-            height (int): The height of the geometric shape.
-        Raises:
-            TypeError: If `width` or `height` is not an integer.
-            ValueError: If `width` or `height` is not greater than 0.
-        """
-        # Validate the width parameter.
-        self.integer_validator("width", width)
-        # Validate the height parameter.
-        self.integer_validator("height", height)
-        # Set the width attribute.
-        self.__width = width
-        # Set the height attribute.
-        self.__height = height
-
     def area(self):
         """
         Computes the area of the geometric shape.
@@ -58,3 +39,30 @@ class BaseGeometry:
 
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
+
+class Rectangle(BaseGeometry):
+    """
+    Represents a rectangle, inheriting from BaseGeometry.
+    This class provides methods to compute the area of the rectangle
+    and validate its dimensions.
+    """
+
+    def __init__(self, width, height):
+        """
+        Initializes the BaseGeometry instance with width and height.
+        Args:
+            width (int): The width of the geometric shape.
+            height (int): The height of the geometric shape.
+        Raises:
+            TypeError: If `width` or `height` is not an integer.
+            ValueError: If `width` or `height` is not greater than 0.
+        """
+        # Validate the width parameter.
+        self.integer_validator("width", width)
+        # Validate the height parameter.
+        self.integer_validator("height", height)
+        # Set the width attribute.
+        self.__width = width
+        # Set the height attribute.
+        self.__height = height
