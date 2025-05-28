@@ -47,6 +47,7 @@ class Circle(Shape):
         Args:
             radius (float): Radius of the circle.
         """
+        super().__init__()
         self.radius = abs(radius)
 
     def area(self):
@@ -85,6 +86,7 @@ class Rectangle(Shape):
             width (float): Width of the rectangle.
             height (float): Height of the rectangle.
         """
+        super().__init__()
         self.__width = width
         self.__height = height
 
