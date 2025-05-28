@@ -1,6 +1,3 @@
-from abc import ABC, abstractmethod
-
-
 class VerboseList(list):
     """
     A custom list class that prints messages when items are added or removed.
