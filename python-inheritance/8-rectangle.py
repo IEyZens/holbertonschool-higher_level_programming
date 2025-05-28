@@ -58,11 +58,10 @@ class Rectangle(BaseGeometry):
             TypeError: If `width` or `height` is not an integer.
             ValueError: If `width` or `height` is not greater than 0.
         """
-        # Validate the width parameter.
+        # Validate the width and height using the integer_validator method
+        # and set them as private attributes.
+        # `width` and `height` must be positive integers.
         self.integer_validator("width", width)
-        # Validate the height parameter.
         self.integer_validator("height", height)
-        # Set the width attribute.
         self.__width = width
-        # Set the height attribute.
         self.__height = height
