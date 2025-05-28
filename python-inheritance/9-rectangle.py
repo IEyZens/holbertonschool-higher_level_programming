@@ -41,4 +41,8 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """Calculates the area of the rectangle."""
+        # Calculate the area of the rectangle by multiplying its width and height.
+        # This method overrides the area method from BaseGeometry to provide
+        # a specific implementation for rectangles.
+        # The area is computed as width multiplied by height.
         return self.__width * self.__height
