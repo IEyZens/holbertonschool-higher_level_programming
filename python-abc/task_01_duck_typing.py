@@ -46,7 +46,7 @@ class Circle(Shape):
         Args:
             radius (float): Radius of the circle.
         """
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """
