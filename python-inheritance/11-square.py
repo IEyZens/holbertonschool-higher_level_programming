@@ -40,6 +40,14 @@ class Square(Rectangle):
         Returns:
             int: The area of the square.
         """
+        """Calculate the area of the square.
+        Args:
+            None
+        Returns:
+            int: The area of the square.
+        Raises:
+            None
+        """
         # Calculate the area of the square.
         # The area of a square is size * size.
         # Return the area of the square.
