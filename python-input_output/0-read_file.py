@@ -17,4 +17,4 @@ def read_file(filename=""):
         # Read the full content of the file
         content = file.read()
         # Print the content to standard output
-        print(content)
+        print(content, end="")
