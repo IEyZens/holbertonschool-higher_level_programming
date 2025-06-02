@@ -13,7 +13,7 @@ def read_file(filename=""):
         filename (str): The path to the text file to be read.
     """
     # Open the file in read mode using 'with' to ensure it is properly closed
-    with open(filename) as file:
+    with open(filename, encoding="utf-8") as file:
         # Read the full content of the file
         content = file.read()
         # Print the content to standard output
