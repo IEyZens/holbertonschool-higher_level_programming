@@ -18,6 +18,6 @@ def to_json_string(my_obj):
     """
     # Use the json.dumps() function to convert the Python object to a JSON
     # string.
-    json_obj = json.dumps(my_obj)
+    json_str = json.dumps(my_obj)
     # Return the JSON string.
-    return json_obj
+    return json_str
