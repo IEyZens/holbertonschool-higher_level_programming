@@ -37,8 +37,6 @@ class Student:
         Returns:
             dict: Dictionary of attributes to be serialized.
         """
-        if attrs is None:
-            return self.__dict__
-        if type(attrs) == list and all(type(a) == str for a in attrs):
+        if isinstance(attrs, list) and all(isinstance(a, str) for a in attrs):
             return {k: self.__dict__[k] for k in attrs if k in self.__dict__}
         return self.__dict__
