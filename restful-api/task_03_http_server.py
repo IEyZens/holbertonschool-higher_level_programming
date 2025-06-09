@@ -38,39 +38,41 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
         - A 404 error message for any unknown path
         """
         if self.path == "/data":
-            user_info = {
+            data_response = {
                 "name": "John",
                 "age": 30,
                 "city": "New York"
             }
 
-            json_data = json.dumps(user_info).encode("utf-8")
+            json_bytes = json.dumps(data_response).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json_data)
+            self.wfile.write(json_bytes)
 
         elif self.path == "/":
+            welcome_message = "Hello, this is a simple API!".encode("utf-8")
 
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"Hello, this is a simple API!")
+            self.wfile.write(welcome_message)
 
         elif self.path == "/status":
+            status_message = "OK".encode("utf-8")
 
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"OK")
+            self.wfile.write(status_message)
 
         elif self.path == "/info":
-            api_metadata = {
+            info_response = {
                 "version": "1.0",
                 "description": "A simple API built with http.server"
             }
 
-            json_bytes = json.dumps(api_metadata).encode("utf-8")
+            json_bytes = json.dumps(info_response).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
