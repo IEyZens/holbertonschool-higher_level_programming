@@ -17,7 +17,7 @@ import http.server
 import json
 
 
-class HttpServer(http.server.BaseHTTPRequestHandler):
+class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
     """
     Custom HTTP request handler that defines behavior for GET requests.
 
@@ -51,22 +51,18 @@ class HttpServer(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json_data)
 
         elif self.path == "/":
-            response = {"message": "Hello, this is a simple API!"}
 
-            json_bytes = json.dumps(response).encode("utf-8")
             self.send_response(200)
-            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write(json_bytes)
+            self.wfile.write(b"Hello, this is a simple API!")
 
         elif self.path == "/status":
-            message = {"status": "OK"}
 
-            json_bytes = json.dumps(message).encode("utf-8")
             self.send_response(200)
-            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write(json_bytes)
+            self.wfile.write(b"OK")
 
         elif self.path == "/info":
             api_metadata = {
@@ -92,7 +88,7 @@ class HttpServer(http.server.BaseHTTPRequestHandler):
 
 
 """
-Starts the HTTP server using the custom HttpServer handler.
+Starts the HTTP server using the custom SimpleAPIHandler handler.
 
 The server listens on all interfaces (0.0.0.0) at port 8000 and
 handles incoming GET requests based on defined routes. It runs
@@ -101,6 +97,6 @@ indefinitely until manually interrupted (e.g., Ctrl+C).
 
 if __name__ == "__main__":
     server_address = ("", 8000)
-    httpd = http.server.HTTPServer(server_address, HttpServer)
+    httpd = http.server.HTTPServer(server_address, SimpleAPIHandler)
     print("🚀 Server running at http://localhost:8000")
     httpd.serve_forever()
