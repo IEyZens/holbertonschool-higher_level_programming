@@ -37,8 +37,6 @@ class httpserver(http.server.BaseHTTPRequestHandler):
         - JSON metadata for `/info`
         - A 404 error message for any unknown path
         """
-        print("Hello, this is a simple API!")
-
         if self.path == "/data":
             dict1 = {
                 "name": "John",
@@ -57,7 +55,7 @@ class httpserver(http.server.BaseHTTPRequestHandler):
 
             bytes2 = json.dumps("Hello, this is a simple API!").encode("utf-8")
             self.send_response(200)
-            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write(bytes2)
 
@@ -85,6 +83,21 @@ class httpserver(http.server.BaseHTTPRequestHandler):
             print("404 Not Found")
 
             self.send_response(404)
-            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write("Endpoint not found".encode("utf-8"))
+
+
+"""
+Starts the HTTP server using the custom httpserver handler.
+
+The server listens on all interfaces (0.0.0.0) at port 8000 and
+handles incoming GET requests based on defined routes. It runs
+indefinitely until manually interrupted (e.g., Ctrl+C).
+"""
+
+if __name__ == "__main__":
+    server_address = ("", 8000)
+    httpd = http.server.HTTPServer(server_address, httpserver)
+    print("🚀 Server running at http://localhost:8000")
+    httpd.serve_forever()
