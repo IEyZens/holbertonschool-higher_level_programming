@@ -118,5 +118,5 @@ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
 ## 🧑‍💻 Author
 
 Project provided by **Guillaume** – Holberton School.
-Contributions by [YourName].
+Contributions by Thomas Roncin.
 
