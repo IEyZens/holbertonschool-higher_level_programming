@@ -1,3 +1,3 @@
--- Calculate the average value of the 'score' column from 'second_table'
--- Returns a single value representing the mean of all non-null scores
-SELECT AVG(score) FROM second_table LIMIT 10;
+-- Calculate the average of all 'score' values in 'second_table'
+-- Rename the result column as 'average' in the output
+SELECT AVG(score) AS average FROM second_table;
