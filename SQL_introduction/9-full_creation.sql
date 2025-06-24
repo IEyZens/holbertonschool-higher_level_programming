@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS second_table
 	id INT,
 	name VARCHAR(256),
 	score INT
-)
+);
 
 -- Insert four rows into 'second_table' with specified id, name, and score values
 INSERT INTO second_table (id, name, score) VALUES
