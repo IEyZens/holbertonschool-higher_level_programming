@@ -3,7 +3,7 @@
 --   - 'id': an integer
 --   - 'name': a string up to 256 characters
 --   - 'score': an integer
-CREATE TABLE IF NOT EXISTS second_table
+CREATE TABLE second_table
 (
 	id INT,
 	name VARCHAR(256),
