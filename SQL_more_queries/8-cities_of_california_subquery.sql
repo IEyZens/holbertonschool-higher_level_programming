@@ -3,5 +3,5 @@
 -- Sort the results by city id in ascending order
 SELECT cities.id, cities.name, cities.state_id
 FROM cities
-WHERE state_id = (SELECT id FROM states WHERE name = 'California')
+WHERE state_id = (SELECT cities.id FROM states WHERE name = 'California')
 ORDER BY cities.id ASC
