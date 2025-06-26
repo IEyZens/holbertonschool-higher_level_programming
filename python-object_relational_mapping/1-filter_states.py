@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Script that lists all states starting with 'N' from the database hbtn_0e_0_usa.
+"""
+Script that lists all states starting with 'N' from the database hbtn_0e_0_usa.
 
 Usage:
-    ./script_name.py <mysql_username> <mysql_password> <database_name>
+    ./1-filter_states.py <mysql_username> <mysql_password> <database_name>
 
 Connects to a MySQL server running on localhost at port 3306.
-Retrieves all states with names starting with 'N' (uppercase), ordered by states.id.
+Retrieves all states with names starting with 'N' (uppercase), ordered by
+states.id.
 """
 import MySQLdb
 import sys
