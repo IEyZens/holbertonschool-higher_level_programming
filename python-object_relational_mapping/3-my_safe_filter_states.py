@@ -1,4 +1,16 @@
 #!/usr/bin/python3
+"""
+Script that safely displays all values in the states table of hbtn_0e_0_usa
+where name matches the argument (safe from MySQL injection).
+
+Usage:
+    ./3-my_safe_filter_states.py <mysql_username> <mysql_password>
+    <database_name> <state_name>
+
+Connects to a MySQL server running on localhost at port 3306.
+Uses parameterized queries to prevent SQL injection.
+Results are sorted in ascending order by states.id.
+"""
 import MySQLdb
 import sys
 
