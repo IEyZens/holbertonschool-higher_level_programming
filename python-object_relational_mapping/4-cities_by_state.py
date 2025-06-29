@@ -9,7 +9,6 @@ Retrieves all cities and their associated state names.
 Results are sorted in ascending order by cities.id.
 Uses only one execute() statement.
 """
-
 import MySQLdb
 import sys
 
