@@ -29,10 +29,13 @@ if __name__ == "__main__":
         .format(sys.argv[1], sys.argv[2], sys.argv[3])
     )
 
+    if len(sys.argv) != 4:
+        sys.exit("Usage: ./script.py <username> <password> <database>")
+
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).all()
+    state = session.query(State).order_by(State.id).all()
 
     for s in state:
         print(f"{s.id}: {s.name}")
