@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Script that safely displays all values in the states table of hbtn_0e_0_usa
+"""Script that safely displays all values in the states table of hbtn_0e_0_usa
 where name matches the argument (safe from MySQL injection).
 
 Usage:
