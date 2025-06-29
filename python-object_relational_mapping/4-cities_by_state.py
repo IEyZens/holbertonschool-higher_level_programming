@@ -22,11 +22,10 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     cur.execute(
-        "SELECT cities.name "
-        "FROM cities "
-        "JOIN states ON cities.state_id = states.id "
-        "WHERE states.name = %s "
-        "ORDER BY cities.id ASC"
+            "SELECT cities.id, cities.name, states.name "
+            "FROM cities "
+            "JOIN states ON cities.state_id = states.id "
+            "ORDER BY cities.id ASC"
     )
 
     for row in cur.fetchall():
