@@ -18,10 +18,10 @@ Functionality:
 Example:
     ./7-model_state_fetch_all.py root root123 hbtn_0e_6_usa
 """
-from model_state import Base, State
+import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import sys
+from model_state import Base, State
 
 if __name__ == "__main__":
 
