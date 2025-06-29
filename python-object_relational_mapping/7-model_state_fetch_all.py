@@ -24,13 +24,14 @@ from sqlalchemy.orm import sessionmaker
 import sys
 
 if __name__ == "__main__":
+
+    if len(sys.argv) != 4:
+        sys.exit("Usage: ./script.py <username> <password> <database>")
+
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost:3306/{}"
         .format(sys.argv[1], sys.argv[2], sys.argv[3])
     )
-
-    if len(sys.argv) != 4:
-        sys.exit("Usage: ./script.py <username> <password> <database>")
 
     Session = sessionmaker(bind=engine)
     session = Session()
