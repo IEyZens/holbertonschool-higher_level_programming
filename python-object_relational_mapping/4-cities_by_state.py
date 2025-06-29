@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Script that lists all cities from the database hbtn_0e_4_usa.
+"""
+Script that lists all cities from the database hbtn_0e_4_usa.
 
 Usage:
     ./4-cities_by_state.py <mysql_username> <mysql_password> <database_name>
@@ -24,8 +25,8 @@ if __name__ == "__main__":
 
     # Execute a JOIN query to get city and corresponding state names
     cur.execute(
-        "SELECT cities.id, cities.name, states.name FROM cities"
-        "INNER JOIN states ON cities.state_id = states.id"
+        "SELECT cities.id, cities.name, states.name FROM cities "
+        "INNER JOIN states ON cities.state_id = states.id "
         "ORDER BY cities.id ASC"
     )
 
