@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that prints the first State object from a MySQL database using SQLAlchemy.
+Script that prints the first State object from a MySQL database using
+SQLAlchemy.
 
 Usage:
     ./8-model_state_fetch_first.py <username> <password> <database>
