@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that adds a new State object “Louisiana” to a MySQL database using SQLAlchemy.
+Script that adds a new State object “Louisiana” to a MySQL database using
+SQLAlchemy.
 
 Usage:
     ./11-model_state_insert.py <username> <password> <database>
