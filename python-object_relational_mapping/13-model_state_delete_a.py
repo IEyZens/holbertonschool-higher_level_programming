@@ -20,9 +20,9 @@ Note:
     The script should not be executed when imported.
 """
 import sys
-from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 
 if __name__ == "__main__":
 
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     states = (
         session.query(State)
-        .filter(State.name.contains('a'))
+        .filter(State.name.like("%a%"))
         .order_by(State.id)
         .all()
     )
