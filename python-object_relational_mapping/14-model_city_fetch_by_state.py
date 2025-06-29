@@ -44,6 +44,6 @@ if __name__ == "__main__":
     )
 
     for citie, state in cities:
-        print("{}: {} {}".format(state.name, citie.id, citie.name))
+        print("{}: ({}) {}".format(state.name, citie.id, citie.name))
 
     session.close()
