@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Script that lists all State objects from a MySQL database using SQLAlchemy.
+"""
+Script that lists all State objects from a MySQL database using SQLAlchemy.
 
 Usage:
     ./7-model_state_fetch_all.py <username> <password> <database>
