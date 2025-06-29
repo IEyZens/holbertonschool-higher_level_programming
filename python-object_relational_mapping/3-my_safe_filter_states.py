@@ -23,7 +23,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     cur.execute(
-        "SELECT * FROM states WHERE BINARY name=%s ORDER BY states.id ASC",
+        "SELECT * FROM states WHERE BINARY name = %s ORDER BY id",
         (sys.argv[4],))
 
     for row in cur.fetchall():
