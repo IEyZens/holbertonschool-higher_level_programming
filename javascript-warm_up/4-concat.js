@@ -2,4 +2,8 @@
 
 const { argv } = require('node:process');
 
-console.log(`${argv[2]} is ${argv[3]}`);
+try {
+  console.log(`${argv[2]} is ${argv[3]}`);
+} catch (error) {
+  console.log(error);
+}
