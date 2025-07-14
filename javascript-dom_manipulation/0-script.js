@@ -1,5 +1,5 @@
 document.querySelector("html")
-const headerElement = document.getElementsByTagName("header");
-for (let i = 0; i < headerElement.length; i++) {
-  headerElement[i].style.color = "#FF0000";
+const header = document.getElementsByTagName("header");
+for (let i = 0; i < header.length; i++) {
+  header[i].style.color = "#FF0000";
 }
