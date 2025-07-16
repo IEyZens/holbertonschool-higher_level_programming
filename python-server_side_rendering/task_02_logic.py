@@ -21,7 +21,7 @@ def contact():
 
 @app.route('/items')
 def items():
-    with open("items.json") as file:
+    with open("items.json", "r") as file:
         data = json.load(file)
         items = data.get["items", []]
     return render_template("items.html", items=items)
