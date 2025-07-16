@@ -54,13 +54,10 @@ def products():
     product_id = request.args.get('id', type=int)
 
     if source == "json":
-        with open("products.json") as file:
-            data = json.load(file)
+        data = read_json("products.json")
 
     elif source == "csv":
-        with open("products.csv") as file:
-            dict_reader = csv.DictReader(file)
-            data = list(dict_reader)
+        data = read_csv("products.csv")
 
     elif source == "sql":
         connection = sqlite3.connect("products.db")
@@ -78,6 +75,7 @@ def products():
                 "category": row[3]
             }
             data.append(product)
+        connection.close()
 
     else:
         return render_template("product_display.html", error="Wrong source")
