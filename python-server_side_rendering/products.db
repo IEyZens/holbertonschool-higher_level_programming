@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Products
+(
+	id PRIMARY KEY,
+	name,
+	price,
+	category
+);
+
+INSERT INTO Products (id, name, price, category)
+VALUES
+("1", "Laptop", "799.99", "Electronics"),
+("2", "Coffee Mug", "15.99", "Home Goods")
